@@ -633,7 +633,7 @@ class Game:
             if not a:
                 running = False
                 return False
-        else:
+        elif not all([self.menu.run,self.death_pause]):
             self.render(screen)
 
         if self.pause.run and not self.death_pause.run:
